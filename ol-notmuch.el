@@ -55,8 +55,6 @@
 
 Should accept a notmuch search string as the sole argument."
   :group 'org-notmuch
-  :version "24.4"
-  :package-version '(Org . "8.0")
   :type 'function)
 
 (defcustom org-notmuch-search-open-function
@@ -64,8 +62,6 @@ Should accept a notmuch search string as the sole argument."
   "Function used to follow notmuch-search links.
 Should accept a notmuch search string as the sole argument."
   :group 'org-notmuch
-  :version "24.4"
-  :package-version '(Org . "8.0")
   :type 'function)
 
 (make-obsolete-variable 'org-notmuch-search-open-function nil "9.3")
