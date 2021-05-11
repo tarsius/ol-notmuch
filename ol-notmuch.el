@@ -48,16 +48,14 @@
 (require 'notmuch)
 (require 'ol)
 
-;; customisable notmuch open functions
+;;; Message links
+
 (defcustom org-notmuch-open-function 'org-notmuch-follow-link
   "Function used to follow notmuch links.
 Should accept a notmuch search string as the sole argument."
   :group 'org-notmuch
   :type 'function)
 
-
-
-;; Install the link type
 (org-link-set-parameters "notmuch"
                          :follow #'org-notmuch-open
                          :store #'org-notmuch-store-link)
@@ -87,7 +85,7 @@ Should accept a notmuch search string as the sole argument."
 Can link to more than one message, if so all matching messages are shown."
   (notmuch-show search))
 
-
+;;; Search links
 
 (org-link-set-parameters "notmuch-search"
                          :follow #'org-notmuch-search-open
@@ -112,7 +110,7 @@ Can link to more than one message, if so all matching messages are shown."
   "Follow a notmuch link by displaying SEARCH in notmuch-search mode."
   (notmuch-search search))
 
-
+;;; Tree links
 
 (org-link-set-parameters "notmuch-tree"
                          :follow #'org-notmuch-tree-open
@@ -137,6 +135,7 @@ Can link to more than one message, if so all matching messages are shown."
   "Follow a notmuch link by displaying SEARCH in notmuch-tree mode."
   (notmuch-tree search))
 
+;;; _
 (provide 'ol-notmuch)
 ;; Local Variables:
 ;; indent-tabs-mode: nil
