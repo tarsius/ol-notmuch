@@ -29,9 +29,9 @@
 
 ;;; Commentary:
 
-;; This file implements links to notmuch messages and "searches". A
+;; This file implements links to notmuch messages and "searches".  A
 ;; search is a query to be performed by notmuch; it is the equivalent
-;; to folders in other mail clients. Similarly, mails are referred to
+;; to folders in other mail clients.  Similarly, mails are referred to
 ;; by a query, so both a link can refer to several mails.
 
 ;; Links have one the following form
@@ -39,7 +39,7 @@
 ;; notmuch-search:<search terms>.
 
 ;; The first form open the queries in notmuch-show mode, whereas the
-;; second link open it in notmuch-search mode. Note that queries are
+;; second link open it in notmuch-search mode.  Note that queries are
 ;; performed at the time the link is opened, and the result may be
 ;; different from when the link was stored.
 
@@ -107,7 +107,7 @@ Can link to more than one message, if so all matching messages are shown."
   (org-notmuch-search-follow-link path))
 
 (defun org-notmuch-search-follow-link (search)
-  "Follow a notmuch link by displaying SEARCH in notmuch-search mode."
+  "Follow a notmuch link by displaying SEARCH in Notmuch-Search mode."
   (notmuch-search search))
 
 ;;; Tree links
@@ -132,7 +132,7 @@ Can link to more than one message, if so all matching messages are shown."
   (org-notmuch-tree-follow-link path))
 
 (defun org-notmuch-tree-follow-link (search)
-  "Follow a notmuch link by displaying SEARCH in notmuch-tree mode."
+  "Follow a notmuch link by displaying SEARCH in Notmuch-Tree mode."
   (notmuch-tree search))
 
 ;;; _
