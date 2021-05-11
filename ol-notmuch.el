@@ -3,10 +3,9 @@
 ;; Copyright (C) 2010-2014, 2021  Matthieu Lemerre
 
 ;; Author: Matthieu Lemerre <racin@free.fr>
+;; Maintainer: Jonas Bernoulli <jonas@bernoul.li>
 ;; Keywords: outlines, hypermedia, calendar, wp
-;; Homepage: https://orgmode.org
-
-;; This file is not part of GNU Emacs.
+;; Homepage: https://git.sr.ht/~tarsius/ol-notmuch
 
 ;; This file is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -20,6 +19,8 @@
 
 ;; You should have received a copy of the GNU General Public License
 ;; along with GNU Emacs.  If not, see <https://www.gnu.org/licenses/>.
+
+;; This file is not part of GNU Emacs or Org mode.
 
 ;;; Commentary:
 
