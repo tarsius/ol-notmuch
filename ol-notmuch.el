@@ -1,6 +1,7 @@
 ;;; ol-notmuch.el --- Links to notmuch messages
 
-;; Copyright (C) 2010-2014, 2021  Matthieu Lemerre
+;; Copyright (C) 2010-2011  Matthieu Lemerre
+;; Copyright (C) 2010-2021  The Org Contributors
 
 ;; Author: Matthieu Lemerre <racin@free.fr>
 ;; Maintainer: Jonas Bernoulli <jonas@bernoul.li>
