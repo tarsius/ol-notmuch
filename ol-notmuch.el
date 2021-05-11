@@ -49,10 +49,8 @@
 (require 'ol)
 
 ;; customisable notmuch open functions
-(defcustom org-notmuch-open-function
-  'org-notmuch-follow-link
+(defcustom org-notmuch-open-function 'org-notmuch-follow-link
   "Function used to follow notmuch links.
-
 Should accept a notmuch search string as the sole argument."
   :group 'org-notmuch
   :type 'function)
@@ -86,7 +84,6 @@ Should accept a notmuch search string as the sole argument."
 
 (defun org-notmuch-follow-link (search)
   "Follow a notmuch link to SEARCH.
-
 Can link to more than one message, if so all matching messages are shown."
   (notmuch-show search))
 
