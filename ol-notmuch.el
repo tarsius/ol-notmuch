@@ -8,6 +8,8 @@
 ;; Keywords: outlines, hypermedia, calendar, wp
 ;; Homepage: https://git.sr.ht/~tarsius/ol-notmuch
 
+;; Package-Requires: ((emacs "25.1") (notmuch "0.32") (org "9.4.5"))
+
 ;; SPDX-License-Identifier: GPL-3.0-or-later
 ;;
 ;; This file is free software: you can redistribute it and/or modify
