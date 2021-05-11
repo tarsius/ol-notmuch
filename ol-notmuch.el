@@ -43,6 +43,7 @@
 
 ;;; Code:
 
+(require 'notmuch)
 (require 'ol)
 
 ;; customisable notmuch open functions
@@ -98,7 +99,6 @@ Should accept a notmuch search string as the sole argument."
   "Follow a notmuch link to SEARCH.
 
 Can link to more than one message, if so all matching messages are shown."
-  (require 'notmuch)
   (notmuch-show search))
 
 
@@ -124,7 +124,6 @@ Can link to more than one message, if so all matching messages are shown."
 
 (defun org-notmuch-search-follow-link (search)
   "Follow a notmuch link by displaying SEARCH in notmuch-search mode."
-  (require 'notmuch)
   (notmuch-search search))
 
 
@@ -150,7 +149,6 @@ Can link to more than one message, if so all matching messages are shown."
 
 (defun org-notmuch-tree-follow-link (search)
   "Follow a notmuch link by displaying SEARCH in notmuch-tree mode."
-  (require 'notmuch)
   (notmuch-tree search))
 
 (provide 'ol-notmuch)
