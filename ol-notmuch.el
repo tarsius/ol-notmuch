@@ -57,15 +57,6 @@ Should accept a notmuch search string as the sole argument."
   :group 'org-notmuch
   :type 'function)
 
-(defcustom org-notmuch-search-open-function
-  'org-notmuch-search-follow-link
-  "Function used to follow notmuch-search links.
-Should accept a notmuch search string as the sole argument."
-  :group 'org-notmuch
-  :type 'function)
-
-(make-obsolete-variable 'org-notmuch-search-open-function nil "9.3")
-
 
 
 ;; Install the link type
