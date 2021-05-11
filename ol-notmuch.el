@@ -1,4 +1,4 @@
-;;; ol-notmuch.el --- Links to notmuch messages
+;;; ol-notmuch.el --- Links to notmuch messages   -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2010-2011  Matthieu Lemerre
 ;; Copyright (C) 2010-2021  The Org Contributors
