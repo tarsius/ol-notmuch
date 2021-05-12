@@ -56,10 +56,13 @@ Should accept a notmuch search string as the sole argument."
   :group 'org-notmuch
   :type 'function)
 
-(org-link-set-parameters "notmuch"
-                         :store  #'org-notmuch-store-link
-                         :follow #'org-notmuch-open)
+;;;###autoload
+(with-eval-after-load 'org
+  (org-link-set-parameters "notmuch"
+                           :store  #'org-notmuch-store-link
+                           :follow #'org-notmuch-open))
 
+;;;###autoload
 (defun org-notmuch-store-link ()
   "Store a link to a notmuch search or message."
   (when (memq major-mode '(notmuch-show-mode notmuch-tree-mode))
@@ -75,6 +78,7 @@ Should accept a notmuch search string as the sole argument."
     (org-link-add-props :description (org-link-email-description))
     org-store-link-plist))
 
+;;;###autoload
 (defun org-notmuch-open (path _)
   "Follow a notmuch message link specified by PATH."
   (funcall org-notmuch-open-function path))
@@ -86,10 +90,13 @@ Can link to more than one message, if so all matching messages are shown."
 
 ;;; Search links
 
-(org-link-set-parameters "notmuch-search"
-                         :store  #'org-notmuch-search-store-link
-                         :follow #'org-notmuch-search-open)
+;;;###autoload
+(with-eval-after-load 'org
+  (org-link-set-parameters "notmuch-search"
+                           :store  #'org-notmuch-search-store-link
+                           :follow #'org-notmuch-search-open))
 
+;;;###autoload
 (defun org-notmuch-search-store-link ()
   "Store a link to a notmuch search or message."
   (when (eq major-mode 'notmuch-search-mode)
@@ -98,16 +105,20 @@ Can link to more than one message, if so all matching messages are shown."
      :link        (concat "notmuch-search:"  notmuch-search-query-string)
      :description (concat "Notmuch search: " notmuch-search-query-string))))
 
+;;;###autoload
 (defun org-notmuch-search-open (path _)
   "Follow a notmuch search link specified by PATH."
   (notmuch-search path))
 
 ;;; Tree links
 
-(org-link-set-parameters "notmuch-tree"
-                         :store  #'org-notmuch-tree-store-link
-                         :follow #'org-notmuch-tree-open)
+;;;###autoload
+(with-eval-after-load 'org
+  (org-link-set-parameters "notmuch-tree"
+                           :store  #'org-notmuch-tree-store-link
+                           :follow #'org-notmuch-tree-open))
 
+;;;###autoload
 (defun org-notmuch-tree-store-link ()
   "Store a link to a notmuch search or message."
   (when (eq major-mode 'notmuch-tree-mode)
@@ -116,6 +127,7 @@ Can link to more than one message, if so all matching messages are shown."
      :link        (concat "notmuch-tree:"  (notmuch-tree-get-query))
      :description (concat "Notmuch tree: " (notmuch-tree-get-query)))))
 
+;;;###autoload
 (defun org-notmuch-tree-open (path _)
   "Follow a notmuch tree link specified by PATH."
   (notmuch-tree path))
