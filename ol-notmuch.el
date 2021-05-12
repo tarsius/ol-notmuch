@@ -57,8 +57,8 @@ Should accept a notmuch search string as the sole argument."
   :type 'function)
 
 (org-link-set-parameters "notmuch"
-                         :follow #'org-notmuch-open
-                         :store #'org-notmuch-store-link)
+                         :store  #'org-notmuch-store-link
+                         :follow #'org-notmuch-open)
 
 (defun org-notmuch-store-link ()
   "Store a link to a notmuch search or message."
@@ -87,8 +87,8 @@ Can link to more than one message, if so all matching messages are shown."
 ;;; Search links
 
 (org-link-set-parameters "notmuch-search"
-                         :follow #'org-notmuch-search-open
-                         :store #'org-notmuch-search-store-link)
+                         :store  #'org-notmuch-search-store-link
+                         :follow #'org-notmuch-search-open)
 
 (defun org-notmuch-search-store-link ()
   "Store a link to a notmuch search or message."
@@ -105,8 +105,8 @@ Can link to more than one message, if so all matching messages are shown."
 ;;; Tree links
 
 (org-link-set-parameters "notmuch-tree"
-                         :follow #'org-notmuch-tree-open
-                         :store #'org-notmuch-tree-store-link)
+                         :store  #'org-notmuch-tree-store-link
+                         :follow #'org-notmuch-tree-open)
 
 (defun org-notmuch-tree-store-link ()
   "Store a link to a notmuch search or message."
