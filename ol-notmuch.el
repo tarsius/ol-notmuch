@@ -63,18 +63,17 @@ Should accept a notmuch search string as the sole argument."
 (defun org-notmuch-store-link ()
   "Store a link to a notmuch search or message."
   (when (memq major-mode '(notmuch-show-mode notmuch-tree-mode))
-    (let* ((message-id (notmuch-show-get-message-id t))
-           (subject (notmuch-show-get-subject))
-           (to (notmuch-show-get-to))
-           (from (notmuch-show-get-from))
-           (date (org-trim (notmuch-show-get-date)))
-           desc link)
-      (org-link-store-props :type "notmuch" :from from :to to :date date
-                            :subject subject :message-id message-id)
-      (setq desc (org-link-email-description))
-      (setq link (concat "notmuch:id:" message-id))
-      (org-link-add-props :link link :description desc)
-      link)))
+    ;; The value is passed around using variable `org-store-link-plist'.
+    (org-link-store-props
+     :type       "notmuch"
+     :message-id (notmuch-show-get-message-id t)
+     :subject    (notmuch-show-get-subject)
+     :from       (notmuch-show-get-from)
+     :to         (notmuch-show-get-to)
+     :date       (org-trim (notmuch-show-get-date)))
+    (org-link-add-props :link (org-link-email-description "notmuch:id:%m"))
+    (org-link-add-props :description (org-link-email-description))
+    org-store-link-plist))
 
 (defun org-notmuch-open (path _)
   "Follow a notmuch message link specified by PATH."
@@ -94,12 +93,10 @@ Can link to more than one message, if so all matching messages are shown."
 (defun org-notmuch-search-store-link ()
   "Store a link to a notmuch search or message."
   (when (eq major-mode 'notmuch-search-mode)
-    (let ((link (concat "notmuch-search:" notmuch-search-query-string))
-          (desc (concat "Notmuch search: " notmuch-search-query-string)))
-      (org-link-store-props :type "notmuch-search"
-                            :link link
-                            :description desc)
-      link)))
+    (org-link-store-props
+     :type        "notmuch-search"
+     :link        (concat "notmuch-search:"  notmuch-search-query-string)
+     :description (concat "Notmuch search: " notmuch-search-query-string))))
 
 (defun org-notmuch-search-open (path _)
   "Follow a notmuch message link specified by PATH."
@@ -119,12 +116,10 @@ Can link to more than one message, if so all matching messages are shown."
 (defun org-notmuch-tree-store-link ()
   "Store a link to a notmuch search or message."
   (when (eq major-mode 'notmuch-tree-mode)
-    (let ((link (concat "notmuch-tree:" (notmuch-tree-get-query)))
-          (desc (concat "Notmuch tree: " (notmuch-tree-get-query))))
-      (org-link-store-props :type "notmuch-tree"
-                            :link link
-                            :description desc)
-      link)))
+    (org-link-store-props
+     :type        "notmuch-tree"
+     :link        (concat "notmuch-tree:"  (notmuch-tree-get-query))
+     :description (concat "Notmuch tree: " (notmuch-tree-get-query)))))
 
 (defun org-notmuch-tree-open (path _)
   "Follow a notmuch message link specified by PATH."
