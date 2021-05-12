@@ -99,12 +99,8 @@ Can link to more than one message, if so all matching messages are shown."
      :description (concat "Notmuch search: " notmuch-search-query-string))))
 
 (defun org-notmuch-search-open (path _)
-  "Follow a notmuch message link specified by PATH."
-  (org-notmuch-search-follow-link path))
-
-(defun org-notmuch-search-follow-link (search)
-  "Follow a notmuch link by displaying SEARCH in Notmuch-Search mode."
-  (notmuch-search search))
+  "Follow a notmuch search link specified by PATH."
+  (notmuch-search path))
 
 ;;; Tree links
 
@@ -121,12 +117,8 @@ Can link to more than one message, if so all matching messages are shown."
      :description (concat "Notmuch tree: " (notmuch-tree-get-query)))))
 
 (defun org-notmuch-tree-open (path _)
-  "Follow a notmuch message link specified by PATH."
-  (org-notmuch-tree-follow-link path))
-
-(defun org-notmuch-tree-follow-link (search)
-  "Follow a notmuch link by displaying SEARCH in Notmuch-Tree mode."
-  (notmuch-tree search))
+  "Follow a notmuch tree link specified by PATH."
+  (notmuch-tree path))
 
 ;;; _
 (provide 'ol-notmuch)
