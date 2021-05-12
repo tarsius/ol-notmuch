@@ -100,7 +100,6 @@ Can link to more than one message, if so all matching messages are shown."
 
 (defun org-notmuch-search-open (path _)
   "Follow a notmuch message link specified by PATH."
-  (message "%s" path)
   (org-notmuch-search-follow-link path))
 
 (defun org-notmuch-search-follow-link (search)
@@ -123,7 +122,6 @@ Can link to more than one message, if so all matching messages are shown."
 
 (defun org-notmuch-tree-open (path _)
   "Follow a notmuch message link specified by PATH."
-  (message "%s" path)
   (org-notmuch-tree-follow-link path))
 
 (defun org-notmuch-tree-follow-link (search)
