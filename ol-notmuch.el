@@ -64,7 +64,7 @@ Should accept a notmuch search string as the sole argument."
 
 ;;;###autoload
 (defun org-notmuch-store-link ()
-  "Store a link to a notmuch search or message."
+  "Store a link to one or more notmuch messages."
   (when (memq major-mode '(notmuch-show-mode notmuch-tree-mode))
     ;; The value is passed around using variable `org-store-link-plist'.
     (org-link-store-props
@@ -98,7 +98,7 @@ Can link to more than one message, if so all matching messages are shown."
 
 ;;;###autoload
 (defun org-notmuch-search-store-link ()
-  "Store a link to a notmuch search or message."
+  "Store a link to a notmuch search."
   (when (eq major-mode 'notmuch-search-mode)
     (org-link-store-props
      :type        "notmuch-search"
@@ -120,7 +120,7 @@ Can link to more than one message, if so all matching messages are shown."
 
 ;;;###autoload
 (defun org-notmuch-tree-store-link ()
-  "Store a link to a notmuch search or message."
+  "Store a link to a notmuch tree."
   (when (eq major-mode 'notmuch-tree-mode)
     (org-link-store-props
      :type        "notmuch-tree"
