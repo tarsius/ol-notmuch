@@ -5,7 +5,7 @@
 
 ;; Author: Matthieu Lemerre <racin@free.fr>
 ;; Maintainer: Jonas Bernoulli <jonas@bernoul.li>
-;; Keywords: outlines, hypermedia, calendar, wp
+;; Keywords: hypermedia, mail
 ;; Homepage: https://git.sr.ht/~tarsius/ol-notmuch
 
 ;; Package-Requires: ((emacs "25.1") (notmuch "0.32") (org "9.4.5"))
