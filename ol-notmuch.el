@@ -2,6 +2,7 @@
 
 ;; Copyright (C) 2010-2011  Matthieu Lemerre
 ;; Copyright (C) 2010-2021  The Org Contributors
+;; Copyright (C) 2021-2022  Jonas Bernoulli
 
 ;; Author: Matthieu Lemerre <racin@free.fr>
 ;; Maintainer: Jonas Bernoulli <jonas@bernoul.li>
@@ -50,7 +51,7 @@
 
 ;;; Message links
 
-(defcustom org-notmuch-open-function 'org-notmuch-follow-link
+(defcustom org-notmuch-open-function #'org-notmuch-follow-link
   "Function used to follow notmuch links.
 Should accept a notmuch search string as the sole argument."
   :group 'org-notmuch
