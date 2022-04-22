@@ -9,7 +9,7 @@
 ;; Keywords: hypermedia, mail
 ;; Homepage: https://git.sr.ht/~tarsius/ol-notmuch
 
-;; Package-Requires: ((emacs "25.1") (notmuch "0.32") (org "9.4.5"))
+;; Package-Requires: ((emacs "25.1") (compat "28.1.1.0") (notmuch "0.32") (org "9.4.5"))
 
 ;; SPDX-License-Identifier: GPL-3.0-or-later
 ;;
@@ -45,6 +45,8 @@
 ;; different from when the link was stored.
 
 ;;; Code:
+
+(require 'compat)
 
 (require 'notmuch)
 (require 'ol)

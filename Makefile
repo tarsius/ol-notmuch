@@ -5,7 +5,8 @@ PKG = ol-notmuch
 ELS   = $(PKG).el
 ELCS  = $(ELS:.el=.elc)
 
-DEPS  = notmuch/emacs
+DEPS  = compat
+DEPS += notmuch/emacs
 DEPS += org/lisp
 
 EMACS      ?= emacs
