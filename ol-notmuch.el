@@ -1,18 +1,22 @@
-;;; ol-notmuch.el --- Links to notmuch messages   -*- lexical-binding: t; -*-
+;;; ol-notmuch.el --- Links to notmuch messages  -*- lexical-binding:t -*-
 
-;; Copyright (C) 2010-2011  Matthieu Lemerre
-;; Copyright (C) 2010-2021  The Org Contributors
-;; Copyright (C) 2021-2022  Jonas Bernoulli
+;; Copyright (C) 2010-2011 Matthieu Lemerre
+;; Copyright (C) 2010-2021 The Org Contributors
+;; Copyright (C) 2021-2022 Jonas Bernoulli
 
 ;; Author: Matthieu Lemerre <racin@free.fr>
 ;; Maintainer: Jonas Bernoulli <jonas@bernoul.li>
-;; Keywords: hypermedia, mail
 ;; Homepage: https://git.sr.ht/~tarsius/ol-notmuch
+;; Keywords: hypermedia mail
 
-;; Package-Requires: ((emacs "25.1") (compat "28.1.1.0") (notmuch "0.32") (org "9.4.5"))
+;; Package-Requires: (
+;;     (emacs "25.1")
+;;     (compat "28.1.1.0")
+;;     (notmuch "0.32")
+;;     (org "9.4.5"))
 
 ;; SPDX-License-Identifier: GPL-3.0-or-later
-;;
+
 ;; This file is free software: you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published
 ;; by the Free Software Foundation, either version 3 of the License,
@@ -25,8 +29,6 @@
 ;;
 ;; You should have received a copy of the GNU General Public License
 ;; along with this file.  If not, see <https://www.gnu.org/licenses/>.
-
-;; This file is not part of GNU Emacs or Org mode.
 
 ;;; Commentary:
 
