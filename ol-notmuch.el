@@ -11,7 +11,7 @@
 
 ;; Package-Requires: (
 ;;     (emacs "25.1")
-;;     (compat "28.1.1.0")
+;;     (compat "29.1.3.4")
 ;;     (notmuch "0.32")
 ;;     (org "9.4.5"))
 
