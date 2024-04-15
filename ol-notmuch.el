@@ -5,7 +5,7 @@
 ;; Copyright (C) 2021-2024 Jonas Bernoulli
 
 ;; Author: Matthieu Lemerre <racin@free.fr>
-;; Maintainer: Jonas Bernoulli <jonas@bernoul.li>
+;; Maintainer: Jonas Bernoulli <emacs.ol-notmuch@jonas.bernoulli.dev>
 ;; Homepage: https://git.sr.ht/~tarsius/ol-notmuch
 ;; Keywords: hypermedia mail
 
