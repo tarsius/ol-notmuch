@@ -11,9 +11,9 @@
 
 ;; Package-Requires: (
 ;;     (emacs "25.1")
-;;     (compat "29.1.4.1")
-;;     (notmuch "0.37")
-;;     (org "9.6.5"))
+;;     (compat "29.1.4.5")
+;;     (notmuch "0.38")
+;;     (org "9.7.4"))
 
 ;; SPDX-License-Identifier: GPL-3.0-or-later
 
