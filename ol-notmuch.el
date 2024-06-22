@@ -13,7 +13,7 @@
 ;; Package-Requires: (
 ;;     (emacs "26.1")
 ;;     (compat "30.0.0.0")
-;;     (notmuch "0.38")
+;;     (notmuch "0.38.4") ;TODO
 ;;     (org "9.7.4"))
 
 ;; SPDX-License-Identifier: GPL-3.0-or-later
@@ -114,7 +114,11 @@ Can link to more than one message, if so all matching messages are shown."
 ;;;###autoload
 (defun org-notmuch-search-open (path _)
   "Follow a notmuch search link specified by PATH."
-  (notmuch-search path))
+  (notmuch-search path
+                  (default-value 'notmuch-search-oldest-first)
+                  ;; Added in cd89065dc36e36b22a2a53832d2cac9b06fba41c!
+                  ;; TODO After 0.38.3.  No release since then yet.
+                  (default-value 'notmuch-search-hide-excluded)))
 
 ;;; Tree links
 
