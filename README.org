@@ -15,5 +15,6 @@ performed at the time the link is opened, and the result may be
 different from when the link was stored.
 
 #+html: <br><br>
+#+html: <a href="https://github.com/tarsius/ol-notmuch/actions/workflows/compile.yml"><img alt="Compile" src="https://github.com/tarsius/ol-notmuch/actions/workflows/compile.yml/badge.svg"/></a>
 #+html: <a href="https://stable.melpa.org/#/ol-notmuch"><img alt="MELPA Stable" src="https://stable.melpa.org/packages/ol-notmuch-badge.svg"/></a>
 #+html: <a href="https://melpa.org/#/ol-notmuch"><img alt="MELPA" src="https://melpa.org/packages/ol-notmuch-badge.svg"/></a>
