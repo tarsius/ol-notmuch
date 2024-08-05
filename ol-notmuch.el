@@ -10,7 +10,7 @@
 ;; Keywords: hypermedia mail
 
 ;; Package-Requires: (
-;;     (emacs "25.1")
+;;     (emacs "26.1")
 ;;     (compat "30.0.0.0")
 ;;     (notmuch "0.38")
 ;;     (org "9.7.4"))
