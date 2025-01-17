@@ -2,7 +2,7 @@
 
 ;; Copyright (C) 2010-2011 Matthieu Lemerre
 ;; Copyright (C) 2010-2021 The Org Contributors
-;; Copyright (C) 2021-2024 Jonas Bernoulli
+;; Copyright (C) 2021-2025 Jonas Bernoulli
 
 ;; Author: Matthieu Lemerre <racin@free.fr>
 ;; Maintainer: Jonas Bernoulli <emacs.ol-notmuch@jonas.bernoulli.dev>
