@@ -6,7 +6,7 @@
 
 ;; Author: Matthieu Lemerre <racin@free.fr>
 ;; Maintainer: Jonas Bernoulli <emacs.ol-notmuch@jonas.bernoulli.dev>
-;; Homepage: https://git.sr.ht/~tarsius/ol-notmuch
+;; Homepage: https://github.com/tarsius/ol-notmuch
 ;; Keywords: hypermedia mail
 
 ;; Package-Version: 2.0.3
