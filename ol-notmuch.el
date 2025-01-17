@@ -11,10 +11,10 @@
 
 ;; Package-Version: 2.0.3
 ;; Package-Requires: (
-;;     (emacs "26.1")
-;;     (compat "30.0.0.0")
-;;     (notmuch "0.38")
-;;     (org "9.7.4"))
+;;     (emacs "29.1")
+;;     (compat "30.0.2.0")
+;;     (notmuch "0.38.2")
+;;     (org "9.7.19"))
 
 ;; SPDX-License-Identifier: GPL-3.0-or-later
 
