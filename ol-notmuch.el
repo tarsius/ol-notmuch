@@ -9,12 +9,12 @@
 ;; Homepage: https://github.com/tarsius/ol-notmuch
 ;; Keywords: hypermedia mail
 
-;; Package-Version: 2.1.3
+;; Package-Version: 2.1.4
 ;; Package-Requires: (
 ;;     (emacs  "29.1")
-;;     (compat "30.1")
+;;     (compat "31.0")
 ;;     (notmuch "0.39")
-;;     (org     "9.7"))
+;;     (org     "9.8"))
 
 ;; SPDX-License-Identifier: GPL-3.0-or-later
 
