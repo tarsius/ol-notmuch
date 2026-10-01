@@ -9,10 +9,10 @@
 ;; Homepage: https://github.com/tarsius/ol-notmuch
 ;; Keywords: hypermedia mail
 
-;; Package-Version: 2.1.4
+;; Package-Version: 2.1.5
 ;; Package-Requires: (
 ;;     (emacs  "29.1")
-;;     (compat "31.0")
+;;     (compat "31.1")
 ;;     (notmuch "0.39")
 ;;     (org     "9.8"))
 
