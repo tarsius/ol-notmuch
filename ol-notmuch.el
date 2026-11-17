@@ -71,18 +71,32 @@ Should accept a notmuch search string as the sole argument."
 ;;;###autoload
 (defun org-notmuch-store-link ()
   "Store a link to one or more notmuch messages."
-  (when (memq major-mode '(notmuch-show-mode notmuch-tree-mode))
-    ;; The value is passed around using variable `org-store-link-plist'.
-    (org-link-store-props
-     :type       "notmuch"
-     :message-id (notmuch-show-get-message-id t)
-     :subject    (notmuch-show-get-subject)
-     :from       (notmuch-show-get-from)
-     :to         (notmuch-show-get-to)
-     :date       (org-trim (notmuch-show-get-date)))
-    (org-link-add-props :link (org-link-email-description "notmuch:id:%m"))
-    (org-link-add-props :description (org-link-email-description))
-    org-store-link-plist))
+  (cond
+    ((memq major-mode '(notmuch-show-mode notmuch-tree-mode))
+     (org-link-store-props
+      :type       "notmuch"
+      :message-id (notmuch-show-get-message-id t)
+      :subject    (notmuch-show-get-subject)
+      :from       (notmuch-show-get-from)
+      :to         (notmuch-show-get-to)
+      :date       (org-trim (notmuch-show-get-date)))
+     (org-link-add-props :link (org-link-email-description "notmuch:id:%m"))
+     (org-link-add-props :description (org-link-email-description))
+     org-store-link-plist)
+    ;; For buffers from which we sent a message.
+    ((and (eq major-mode 'notmuch-message-mode)
+          message-sent-message-via)
+     (org-link-store-props
+      :type       "notmuch"
+      :message-id (string-trim (message-fetch-field "Message-ID") "<" ">")
+      :subject    (message-fetch-field "Subject")
+      :from       (message-fetch-field "From")
+      :to         (message-fetch-field "To")
+      :date       (message-fetch-field "Date"))
+     (org-link-add-props :link (org-link-email-description "notmuch:id:%m"))
+     (org-link-add-props :description (org-link-email-description))
+     ;; The value is passed around using this variable.
+     org-store-link-plist)))
 
 ;;;###autoload
 (defun org-notmuch-open (path _)
